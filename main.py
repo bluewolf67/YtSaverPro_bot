@@ -56,4 +56,17 @@ if __name__ == "__main__":
     t = Thread(target=run)
     t.start()
     bot.infinity_polling()
+        opts = {
+        'format': f'best[height<={quality}][ext=mp4]/best',
+        'outtmpl': fn,
+        'max_filesize': 80 * 1024 * 1024,
+        'nocheckcertificate': True,
+        'ignoreerrors': False,
+        'logtostderr': False,
+        'quiet': True,
+        'no_warnings': True,
+        'default_search': 'auto',
+        'source_address': '0.0.0.0'
+}
+
     
